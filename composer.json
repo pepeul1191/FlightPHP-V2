@@ -1,0 +1,15 @@
+{
+    "name": "pepe/flpp",
+    "autoload": {
+        "psr-4": {
+            "Pepe\\Flpp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pepe Valdivia",
+            "email": "pepe.valdivia.caballero@gmail.com"
+        }
+    ],
+    "require": {}
+}
