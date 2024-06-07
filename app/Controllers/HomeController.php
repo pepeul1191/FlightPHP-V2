@@ -1,9 +1,10 @@
 <?php
 namespace App\Controllers;
+use Flight;
 
 class HomeController {
   public function index() {
-    echo 'Hola, mundo desde HomeController!';
+    Flight::view()->display('home.twig');
   }
 
   public function about() {

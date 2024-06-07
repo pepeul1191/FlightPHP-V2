@@ -11,7 +11,12 @@
             "email": "pepe.valdivia.caballero@gmail.com"
         }
     ],
+    "scripts": {
+		"start": "php -S localhost:8080",
+		"dump": "composer dump-autoload -o"
+	},
     "require": {
-        "mikecao/flight": "^3.10"
+        "mikecao/flight": "^3.10",
+        "twig/twig": "^3.10"
     }
 }
