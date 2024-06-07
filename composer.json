@@ -2,7 +2,7 @@
     "name": "pepe/flpp",
     "autoload": {
         "psr-4": {
-            "Pepe\\Flpp\\": "src/"
+            "App\\": "app/"
         }
     },
     "authors": [
