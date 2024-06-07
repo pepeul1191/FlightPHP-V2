@@ -11,5 +11,7 @@
             "email": "pepe.valdivia.caballero@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "mikecao/flight": "^3.10"
+    }
 }
