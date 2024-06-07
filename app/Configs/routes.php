@@ -2,7 +2,7 @@
 use App\Controllers\HomeController;
 use Flight;
 
-Flight::route('/', [HomeController::class, 'index']);
+Flight::route('GET /', [HomeController::class, 'index']);
 Flight::route('/about', [HomeController::class, 'about']);
 
 // Puedes agregar más rutas según sea necesario
