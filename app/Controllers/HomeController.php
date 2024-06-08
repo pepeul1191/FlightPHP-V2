@@ -1,9 +1,13 @@
 <?php
+
 namespace App\Controllers;
+
 use Flight;
 use Model;
+use \App\Helpers\HomeHelper;
 
-class HomeController {
+class HomeController 
+{
   public function index() 
   {
     Flight::view()->display('home.twig');
@@ -11,10 +15,10 @@ class HomeController {
 
   public function about() 
   {
-    echo 'Acerca de nosotros desde HomeController!';
+    echo 'Acerca de nosotros desde HomeController! ' . HomeHelper::format_date('2024-06-07');
   }
 
-  public function levelList()
+  public function level_list()
   {
     // data
     $resp = [];
