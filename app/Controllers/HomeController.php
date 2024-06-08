@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use \App\Controllers\BaseController;
 use \App\Helpers\HomeHelper;
+use \App\Middlewares\IsLoggedMiddleware;
 use Flight;
 use Model;
 
@@ -15,7 +16,8 @@ class HomeController extends BaseController
 
   public function index() 
   {
-    Flight::view()->display('home.twig');
+    //IsLoggedMiddleware::handle($this->request, $this->response);
+    $this->view->display('home.twig');
   }
 
   public function about() 
@@ -38,7 +40,10 @@ class HomeController extends BaseController
       $resp = json_encode(['ups', $e->getMessage()]);
     }
     // resp
-    http_response_code($status);
-    echo $resp;
+    //http_response_code($status);
+    //echo $resp;
+    $this->response->status($status);
+    $this->response->write($resp);
+    $this->send();
   }
 }
