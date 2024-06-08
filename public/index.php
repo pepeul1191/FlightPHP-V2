@@ -8,6 +8,6 @@ if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
 define('BASE_PATH', dirname(__DIR__));
 
 require '../vendor/autoload.php';
-require '../app/Configs/bootstrap.php';
+require '../configs/bootstrap.php';
 
 Flight::start();
