@@ -12,7 +12,12 @@ class ErrorController extends BaseController
   }
 
   public function not_found($number){
-    Flight::response()->status(404);
-    Flight::response()->write('Internal Server Error');
+    $method = Flight::request()->method;
+    if ($method === 'GET') {
+      Flight::view()->display('error.twig');
+    } else {
+      Flight::response()->status($number);
+      Flight::response()->write('Error 404: Recurso no encontrado');
+    }
   }
 }
