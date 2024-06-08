@@ -2,12 +2,17 @@
 
 namespace App\Controllers;
 
+use \App\Controllers\BaseController;
+use \App\Helpers\HomeHelper;
 use Flight;
 use Model;
-use \App\Helpers\HomeHelper;
 
-class HomeController 
+class HomeController extends BaseController 
 {
+  public function __construct() {
+    parent::__construct();
+  }
+
   public function index() 
   {
     Flight::view()->display('home.twig');
