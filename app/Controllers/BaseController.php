@@ -2,12 +2,15 @@
 
 namespace App\Controllers;
 
-class BaseController {
-  public function __construct() {
+class BaseController 
+{
+  public function __construct() 
+  {
     // TODO?
   }
 
-  protected function commonFunction() {
+  protected function commonFunction() 
+  {
     // TODO example?
   }
 }
