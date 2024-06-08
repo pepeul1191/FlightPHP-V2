@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Models;
 use Model;
 
 class Level extends Model

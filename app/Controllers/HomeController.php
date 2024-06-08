@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
 use Flight;
+use Model;
 
 class HomeController {
   public function index() 
@@ -20,7 +21,7 @@ class HomeController {
     $status = 200;
     // logic
     try {
-      $rs = \Model::factory('Level', 'app')
+      $rs = Model::factory('App\Models\Level', 'app')
         ->find_array();
       $resp = json_encode($rs);
     }catch (\Exception $e) {

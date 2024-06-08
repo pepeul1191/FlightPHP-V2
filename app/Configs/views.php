@@ -3,7 +3,7 @@
 use Twig\Loader\FilesystemLoader;
 use Twig\Environment;
 use Flight;
-// Configurar Twig
+
 Flight::register('view', 'Twig\Environment', [
   new FilesystemLoader(__DIR__ . '/../Views'),
 ], function($twig) {
