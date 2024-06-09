@@ -8,6 +8,7 @@ abstract class BaseController
   protected $request;
   protected $response;
   protected $view;
+  protected $env;
 
   public function __construct() 
   {
@@ -15,6 +16,7 @@ abstract class BaseController
     $this->request = Flight::request();
     $this->response = Flight::response();
     $this->view = Flight::view();
+    $this->env = $_ENV;
   }
 
   protected function send() 
